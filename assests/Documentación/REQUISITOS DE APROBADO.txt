@@ -1,0 +1,25 @@
+DOC
+
+	REDACCIÓN DEL PROYECTO
+
+	ANALISIS DE RENTABILIDAD
+
+	DESCRIPCIÓN DE FUNCIONALIDAD
+
+	READ ME
+
+SE DEBE ENTREGAR:
+
+	index.html
+
+	style.css
+	
+		sin repetir clases
+
+	main.js
+
+		condiciones
+
+		transiciones
+
+		bucles

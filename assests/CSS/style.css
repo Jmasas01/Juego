@@ -1,0 +1,460 @@
+html, body{
+
+    height: 100%;
+    background-image: url(../img/overhead-view-red-dices-casino-chips-green-poker-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-repeat:repeat ;
+        height: auto;
+    }
+}
+
+                                /*PRIMER CONTAINER: RULETA, BOTON Y ELECCION DE APUESTA*/
+
+/* Animacion de rotacion de ruleta */
+.rotate-center {
+	-webkit-animation: rotate-center 0.8s linear 6 both;
+	        animation: rotate-center 0.8s linear 6 both;
+
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+            transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    }
+}
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+            transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    }
+}
+
+/* Rotacion de la BOlA */
+
+.rotate-center2 {
+	-webkit-animation: rotate-center 0.8s linear 6 reverse both;
+	animation: rotate-center 0.8s linear 6 reverse both;
+
+}
+
+@-webkit-keyframes rotate-center2 {
+    0% {
+        -webkit-transform: rotate(0);
+            transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    }
+}
+@keyframes rotate-center2 {
+    0% {
+        -webkit-transform: rotate(0);
+                    transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    }
+}
+
+/* MODIFICACION DE CLASES CSS */
+
+
+.black-background{
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+.red-background{
+
+    background-color: rgb(239, 84, 81);
+
+}
+
+.giro{
+
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0% 0% 0% 5%;
+    width: 85%;
+    height: auto;
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .giro {
+
+        width: 65%;
+        margin-left: 17%;
+        margin-right: 17%;
+
+    }
+}
+
+.bola{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin: 0% 0% 0% 5%;
+    width: 85%;
+    height: auto;
+
+}
+
+@media screen and (max-width: 480px) {
+    .bola {
+
+        width: 65%;
+        margin-left: 17%;
+        margin-right: 17%;
+
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: black;
+
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.contenedor{
+
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+
+}
+
+.contenedor-ruleta{
+
+    width: 40%;
+    height: 100%;
+    flex-basis: 40%; 
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-ruleta {
+        flex-basis: 100%; /* Full width for mobile devices */
+    }
+}
+
+.cuadrotexto{
+
+    border-radius: 10%;
+    font-size: 2vw;
+    background: rgba(0, 0, 0, 0.5)  ;
+    padding: 5px 5px 5px 5px;
+    margin: 0% 15% 0% 15%;
+    width: 68%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 480px) {
+    .cuadrotexto {
+
+        font-size: 3vw;
+
+    }
+}
+
+.cmb{
+
+    margin: 1%;
+
+}
+
+.boton{
+
+    width: 50%;
+    border-radius: 100%;
+    font-size: 2vw;
+    /* height: 5%; */
+    padding: 2%;
+    margin: 3% 25% 0% 25%;
+    
+
+}
+
+#popupi{
+    font-size: 3vh;
+    border-radius: 20%;
+    margin: 0%;
+    background-color: rgba(0, 255, 242, 0.432);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#closer{
+
+    font-size: 3vh;
+    border-radius: 20%;
+    margin: 0%;
+    background-color: rgba(0, 255, 242, 0.432);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+}
+
+@media screen and (max-width: 480px) {
+    .boton {
+
+        font-size: 5vw;
+
+    }
+}
+
+
+
+                                /*SEGUNDO CONTAINER: APUESTA Y RESULTADO*/
+
+                                                /* APUESTA */
+
+.contenedor-resultados{
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    flex-direction: column;
+    flex-basis: 40%; 
+    box-sizing: border-box;
+
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-resultados {
+        flex-basis: 100%; /* Full width for mobile devices */
+
+    }
+}
+
+.reini{
+
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .reini{
+
+        justify-content: center;
+        margin-top: 3%;
+
+    }
+
+}
+
+.reinicio{
+
+    margin-top: 3%;
+    height: 45%;
+    width: 52%;
+    align-self: start;
+    background-color: rgba(0, 68, 34, 0.5);
+    color: white;
+    border-radius: 25%;
+
+}
+
+.resulatado{
+
+    height: 25%; width: 100%;
+    display: flex;
+    align-items: end;
+    
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .resulatado{
+
+        justify-content: center;
+
+    }
+
+}
+
+.apuesta{
+
+    height: 50%; width: 100%;
+    display: flex;
+    align-items: end;  
+    padding-bottom: 3%;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .apuesta{
+
+        justify-content: center;
+
+    }
+
+}
+
+textarea{
+
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 102, 51, 0.5);
+    width: 45%;
+    height: 20%;
+    color: white;
+    font-size: 150%;
+    padding: 3%;
+    
+}
+
+::placeholder{
+
+    color: white;
+
+}
+
+                                                /* RESULTADO */
+
+
+
+
+                                /*TERCER CONTAINER: CANTIDAD INGRESADA*/
+
+.contenedor-ingresos{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    text-align: center;
+    flex-basis: 20%; 
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-ingresos {
+        flex-basis: 100%; /* Full width for mobile devices */
+        height: 100%;
+    }
+}
+
+.apt{
+
+    text-align: center;
+
+}
+
+.totalingresos{
+
+    height: 70%;
+    width: 80%;
+    margin-bottom: 3%;
+    margin-right: 5%;
+    background-color: black;
+    border: 0%;
+
+}
+
+@media screen and (max-width: 480px) {
+    .totalingresos {
+
+        margin: 0%;
+        margin-top: 1%;
+
+    }
+}
+
+.finali{
+
+    background-color: rgba(0, 68, 34, 0.5);
+    color: white;
+    border-radius: 25%;
+    
+
+}
+
+@media screen and (max-width: 480px) {
+    .finali {
+
+        margin: 0%;
+        margin-top: 1%;
+
+    }
+}
+
+.finalizar{
+
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1%;
+
+}
+
+.ingrest{
+
+    width: 100%;
+    justify-content: center;
+
+}
+
+.fin{
+
+    font-size: 3vh;
+
+}
